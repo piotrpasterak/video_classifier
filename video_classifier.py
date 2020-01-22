@@ -85,7 +85,6 @@ def run_inference_for_single_image(model, image):
         detection_masks_reframed = tf.cast(detection_masks_reframed > 0.5,
                                            tf.uint8)
         output_dict['detection_masks_reframed'] = detection_masks_reframed.numpy()
-
     return output_dict
 
 def show_inference(model, image_path):
@@ -98,7 +97,7 @@ def show_inference(model, image_path):
         # Actual detection.
         output_dict = run_inference_for_single_image(model, image_np)
         # Visualization of the results of a detection.
-        vis_util.visualize_boxes_and_labels_on_image_array(
+        counting_mode   = vis_util.visualize_boxes_and_labels_on_image_array(
             image_np,
             output_dict['detection_boxes'],
             output_dict['detection_classes'],
@@ -106,7 +105,10 @@ def show_inference(model, image_path):
             category_index,
             instance_masks=output_dict.get('detection_masks_reframed', None),
             use_normalized_coordinates=True,
-            line_thickness=8)
+            line_thickness=4)
+
+        print(counting_mode)
+
         cv2.imshow("detect", cv2.resize(image_np,(800, 600)))
         if cv2.waitKey(25) & 0xFF == ord('q'):
             cv2.DestroyAllWindows()
