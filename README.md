@@ -23,7 +23,7 @@ aby użyc któregokolwiek ze skrytów wystrczy go uruchomić z lini poleceń bez
 
 ## Wyniki
 Osiągnięte wyniki sa zadowalajace ale nie idealne: 
-![Result](Recognize.png "Recognized frame")
+![Result](recognize.png "Recognized frame")
 
 W kilku rzadkich przypadkach obiekty nie były właściwie rozpoznawane co wynika ze słabości samego modelu.
 W tej wersji implementacji model o wiekszych możliwosciach nie mógł być wykorzystany z powodu braku wsparcia dla obliczen na GPU przy użyciu technologii CUDA.
