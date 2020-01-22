@@ -1,4 +1,4 @@
-#Image and Video Classifier Project
+# Image and Video Classifier Project
 
 W ponizszym projekcie zaimplementowałem pierwszą wersje mechanizmu rozpoznawania obrazu.
 Jest ona pierwsza ponieważ planuję rozwijac i ulepszac tę implementacje.
@@ -14,14 +14,14 @@ Do pracy implementacja wymaga:
 * Biblioteki Keras (https://keras.io/) 
 * Interpretatora jezyka python 3.6
 
-##Użycie
+## Użycie
 Projekt podzielony jest na dwa skrypty w jezyku Python:
 * image_classifier.py - jest skryptem rozpoznawania obrazów ulokowanych w katalogu models/research/object_detection/test_images.
 * video_classifier.py - jest skryptem rozpoznawania video strumieniowanego z web kamery.
 
 aby użyc któregokolwiek ze skrytów wystrczy go uruchomić z lini poleceń bez parametrów. 
 
-##Wyniki
+## Wyniki
 Osiągnięte wyniki sa zadowalajace ale nie idealne: 
 ![Result](Recognize.png "Title")
 
